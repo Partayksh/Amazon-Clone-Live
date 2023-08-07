@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/Img/About me.jpg" alt="">
+                </div>
+                <div class="about-col-1">
+                    <h2 class="sub-titles">About Me</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum pariatur ipsum iusto tempore,
+                        ratione repellat nesciunt. Earum dolorum veniam voluptates. Quam dicta, aliquid vitae possimus,
+                        sapiente consectetur distinctio dolore exercitationem excepturi est reprehenderit, ducimus
+                        nulla. Iusto eius ab molestiae culpa deserunt consequuntur eaque possimus! Magnam ipsum tenetur
+                        hic praesentium ipsam?</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" oneclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" oneclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" oneclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Developer</span><br></li>
+                            <li><span>App Developer</span><br></li>
+                            <li><span> Photoshop</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            None i.e, Fresher
+                            <br>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            P.I.E.T Persuing B.tech,cse(AI&DS)
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+
+</body>
+
+</html>
